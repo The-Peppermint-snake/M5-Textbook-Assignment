@@ -23,10 +23,10 @@ function showGames() {
             case "L":
                 gameInfo += "<p class='lose'>";
                 break;
-            case "s":
+            case "S":
                 gameInfo += "<p class='suspended'>";
                 break;
-            case "p":
+            case "P":
                 gameInfo += "<p class='postponed'>";
                 break;
         }
@@ -42,7 +42,7 @@ function showGames() {
         } else if (gameInnings[i] < 9) {
             gameInfo += " [" + gameInnings[i]+"]*";
         } else if (gameInnings[i] > 9) {
-            gameInfo =+ " [" + gameInnings[i] +"]";
+            gameInfo += " [" + gameInnings[i] +"]";
         }
         gameInfo += "<p>";
         let tableCell = document.getElementById(gameDates[i]);
