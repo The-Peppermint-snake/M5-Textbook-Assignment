@@ -14,20 +14,20 @@ function addWeekdays() {
 window.addEventListener("load", showGames);
 
 function showGames() {
-    for (let i = 0; i < gameDates.legth; i++) {
+    for (let i = 0; i < gameDates.length; i++) {
         let gameInfo = "";
         switch (gameResults[i]) {
             case "W":
-                gameInfo += "<p class='win'";
+                gameInfo += "<p class='win'>";
                 break;
             case "L":
-                gameInfo += "<p class='lose'";
+                gameInfo += "<p class='lose'>";
                 break;
             case "s":
-                gameInfo += "<p class='suspended'";
+                gameInfo += "<p class='suspended'>";
                 break;
             case "p":
-                gameInfo += "<p class='postponed'";
+                gameInfo += "<p class='postponed'>";
                 break;
         }
         if (gameLocations[i] === "h") {
@@ -46,6 +46,6 @@ function showGames() {
         }
         gameInfo += "<p>";
         let tableCell = document.getElementById(gameDates[i]);
-        tableCell.insertAdjacentHTML("beforeend", gameInfo)
+        tableCell.insertAdjacentHTML("beforeEnd", gameInfo);
     }
 }
